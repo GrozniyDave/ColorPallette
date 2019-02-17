@@ -65,6 +65,23 @@ function updateFirst() {
   } else if (harmonySelect.value === "compound") {
     compound(baseH, baseS, baseL);
   }
+
+  //THIS sets hexacodes dynamically when we choose colors
+  document.querySelector("#hex1").textContent = rgbToHex(
+    block1.style.backgroundColor
+  );
+  document.querySelector("#hex2").textContent = rgbToHex(
+    block2.style.backgroundColor
+  );
+  document.querySelector("#hex3").textContent = rgbToHex(
+    blockBase.style.backgroundColor
+  );
+  document.querySelector("#hex4").textContent = rgbToHex(
+    block4.style.backgroundColor
+  );
+  document.querySelector("#hex5").textContent = rgbToHex(
+    block5.style.backgroundColor
+  );
 }
 // Hex code to RGB function
 
@@ -200,4 +217,23 @@ function compound(h, s, l) {
   block2.style.backgroundColor = "hsl(" + color2h + ", " + s + "%, " + l + "%)";
   block4.style.backgroundColor = "hsl(" + color4h + ", " + s + "%, " + l + "%)";
   block5.style.backgroundColor = "hsl(" + color5h + ", " + s + "%, " + l + "%)";
+}
+// this func takes calculates rgb to hex
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(rgb) {
+  let rgbArr = rgb.substring(4, rgb.length - 1).split(",");
+  console.log(rgbArr);
+  let r = rgbArr[0];
+  let g = rgbArr[1];
+  let b = rgbArr[2];
+
+  r = parseInt(r);
+  g = parseInt(g);
+  b = parseInt(b);
+
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }

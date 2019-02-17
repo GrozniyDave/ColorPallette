@@ -29,14 +29,13 @@ html {
 .colorBlock {
   height: 200px;
   min-width: 200px;
-  background-color: #c9c9d8;
-  border: 1px black solid;
+  background-color: #323232;
   margin: 2px;
 }
 .hexdiv {
   height: 30px;
   min-width: 200px;
-  background-color: #c9c9d8;
+  background-color: white;
   border: 1px black solid;
   margin: 2px;
 }
