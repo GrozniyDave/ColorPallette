@@ -8,39 +8,37 @@
     <title>Color Pallette</title>
   </head>
   <header>
-    <div class="buttons">
-      <div class="dropdown">
-        <button class="dropbtn">How you want it? &#8595;</button>
-        <div class="dropdown-content">
-          <a href="#">Analogous</a>
-          <a href="#">Monochromatic</a>
-          <a href="#">Triad</a>
-          <a href="#">Complementary</a>
-        </div>
+    <div class="headDiv">
+      <div class="choosing">
+        <h1>Choose your color:</h1>
+        <input type="color" id="colorSelect" />
       </div>
-      <div class="choice">BaseColor div</div>
+      <form>
+        Change Color Harmony:
+        <select id="harmonySelect">
+          <option value="analogous">Analogous</option>
+          <option value="monochromatic">Monochromatic</option>
+          <option value="triad">Triad</option>
+          <option value="complementary">Complementary</option>
+          <option value="compound">Compound</option>
+          <option value="shades">Shades</option>
+        </select>
+      </form>
     </div>
-
-    <div class="pallette">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
+    <div id="colorGrid">
+      <div class="colorBlock" id="color-1"></div>
+      <div class="colorBlock" id="color-2"></div>
+      <div class="colorBlock" id="color-base"></div>
+      <div class="colorBlock" id="color-4"></div>
+      <div class="colorBlock" id="color-5"></div>
     </div>
-    <div class="hexes">
-      <div class="rectanle"><h1 class="hexcode">hey</h1></div>
-      <div class="rectanle"><h1 class="hexcode">you</h1></div>
-      <div class="rectanle"><h1 class="hexcode">check</h1></div>
-      <div class="rectanle"><h1 class="hexcode">it</h1></div>
-      <div class="rectanle"><h1 class="hexcode">out!</h1></div>
+    <div class="codes">
+      <div id="hex1" class="hexdiv"></div>
+      <div id="hex2" class="hexdiv"></div>
+      <div id="hex3" class="hexdiv"></div>
+      <div id="hex4" class="hexdiv"></div>
+      <div id="hex5" class="hexdiv"></div>
     </div>
-    <div id="colorwheel">Stolen color wheel by Casey Jay Martin =)</div>
-
-    <!-- 
-This color wheel is made up of thousands of lines of HTML and CSS.
-Instead of writing it out myself I wrote some simple JavaScript to do it for me.
--->
   </header>
   <body>
     <script src="js.js"></script>
