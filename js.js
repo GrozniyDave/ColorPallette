@@ -14,7 +14,7 @@ let defaultColor = "#000000";
 // Color selector
 let colorSelect = document.getElementById("colorSelect");
 
-colorSelect.value = "#c9c9d8";
+colorSelect.value = "#b96893";
 
 // Harmony selector
 let harmonySelect = document.querySelector("#harmonySelect");
@@ -95,8 +95,6 @@ function hexToRgb(hex) {
       }
     : null;
 }
-
-console.log(hexToRgb("#0000ff"));
 
 // r,g,b to HSL function below
 
@@ -218,15 +216,14 @@ function compound(h, s, l) {
   block4.style.backgroundColor = "hsl(" + color4h + ", " + s + "%, " + l + "%)";
   block5.style.backgroundColor = "hsl(" + color5h + ", " + s + "%, " + l + "%)";
 }
-// this func takes calculates rgb to hex
+// this func  conerts rgb to hex
 function componentToHex(c) {
   var hex = c.toString(16);
   return hex.length == 1 ? "0" + hex : hex;
 }
-
+//this func returns #xxxxxx code
 function rgbToHex(rgb) {
   let rgbArr = rgb.substring(4, rgb.length - 1).split(",");
-  console.log(rgbArr);
   let r = rgbArr[0];
   let g = rgbArr[1];
   let b = rgbArr[2];

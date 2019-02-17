@@ -17,7 +17,8 @@ html {
 #colorSelect {
   border: none;
   appearance: none;
-  margin: 10px 5px 0px;
+  margin: 12px 20px 0px;
+  transform: scale(1.5);
 }
 
 #colorGrid,
@@ -33,20 +34,14 @@ html {
   margin: 2px;
 }
 .hexdiv {
-  height: 30px;
+  height: 20px;
   min-width: 200px;
-  background-color: white;
-  border: 1px black solid;
+  color: #cdcdcd;
   margin: 2px;
-}
-
-#harmonySelect {
   text-align: center;
 }
+
 .choosing {
   display: inline-flex;
   justify-content: space-around;
-}
-#color-base {
-  border: 5px #c9c9d8 solid;
 }
